@@ -27,6 +27,10 @@ public class TaskService {
         return taskRepository.getTaskById(taskId);
     }
 
+    public List<Task> getListOfTasksByEpicName(String epic) {
+        return taskRepository.getTasksByEpicName(epic);
+    }
+
     public Task createTask(Task task, String todoId) {
         Todo todo = todoRepository.getTodoById(todoId);
 
