@@ -22,9 +22,9 @@ public class TaskController {
         return taskService.getTask(taskId);
     }
 
-    @GetMapping(value = "api/v1/tasks/{epicName}")
-    public List<Task> getTasksByEpicName(@PathVariable("epicName") String epicName) {
-        return taskService.getListOfTasksByEpicName(epicName);
+    @GetMapping(value = "api/v1/tasks/epics/{epic}")
+    public List<Task> getTasksByEpicName(@PathVariable("epic") String epic) {
+        return taskService.getTasksByEpic(epic);
     }
 
     @PostMapping(value = "api/v1/todos/{todoId}/tasks")

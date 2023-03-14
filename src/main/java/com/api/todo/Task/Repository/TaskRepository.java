@@ -8,5 +8,5 @@ import java.util.List;
 public interface TaskRepository extends MongoRepository<Task, String> {
     Task getTaskById(String id);
     void deleteTaskByTodoId(String todoId);
-    List<Task> getTasksByEpicName(String epic);
+    List<Task> getTasksByEpic(String epic);
 }
