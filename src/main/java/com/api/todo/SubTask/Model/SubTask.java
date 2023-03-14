@@ -1,4 +1,4 @@
-package com.api.todo.SubTask;
+package com.api.todo.SubTask.Model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

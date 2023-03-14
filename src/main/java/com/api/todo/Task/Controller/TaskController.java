@@ -1,5 +1,7 @@
-package com.api.todo.Task;
+package com.api.todo.Task.Controller;
 
+import com.api.todo.Task.Service.TaskService;
+import com.api.todo.Task.Model.Task;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

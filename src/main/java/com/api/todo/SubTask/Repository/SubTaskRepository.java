@@ -1,5 +1,6 @@
-package com.api.todo.SubTask;
+package com.api.todo.SubTask.Repository;
 
+import com.api.todo.SubTask.Model.SubTask;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface SubTaskRepository extends MongoRepository<SubTask, String> {

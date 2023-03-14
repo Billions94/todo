@@ -1,8 +1,10 @@
-package com.api.todo.SubTask;
+package com.api.todo.SubTask.Service;
 
-import com.api.todo.Task.Task;
-import com.api.todo.Task.TaskRepository;
-import com.api.todo.Todo.TodoRepository;
+import com.api.todo.SubTask.Model.SubTask;
+import com.api.todo.SubTask.Repository.SubTaskRepository;
+import com.api.todo.Task.Model.Task;
+import com.api.todo.Task.Repository.TaskRepository;
+import com.api.todo.Todo.Repository.TodoRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,5 +1,7 @@
-package com.api.todo.Todo;
+package com.api.todo.Todo.Controller;
 
+import com.api.todo.Todo.Service.TodoService;
+import com.api.todo.Todo.Model.Todo;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
