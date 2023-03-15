@@ -53,7 +53,7 @@ public class TodoService extends Util {
         boolean exists = todoRepository.existsById(todoId);
 
         if (!exists)
-            throw new IllegalStateException(this.concatStrings("Todo with id does not exist", todoId));
+            throw new IllegalStateException(this.appendId("Todo with id does not exist", todoId));
 
         subTaskRepository.deleteSubTaskByTodoId(todoId);
         taskRepository.deleteTaskByTodoId(todoId);

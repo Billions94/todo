@@ -86,7 +86,7 @@ public class TaskService extends Util {
         boolean exists = todoRepository.existsById(taskId);
 
         if (!exists)
-            throw new IllegalStateException(this.concatStrings("Task with id does not exists", taskId));
+            throw new IllegalStateException(this.appendId("Task with id does not exists", taskId));
 
         subTaskRepository.deleteAllSubTaskByTaskId(taskId);
         taskRepository.deleteById(taskId);

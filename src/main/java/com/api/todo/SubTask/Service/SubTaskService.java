@@ -79,7 +79,7 @@ public class SubTaskService extends Util {
         boolean exists = todoRepository.existsById(subTaskId);
 
         if (!exists)
-            throw new IllegalStateException(this.concatStrings("SubTask with id does not exists", subTaskId));
+            throw new IllegalStateException(this.appendId("SubTask with id does not exists", subTaskId));
 
         subTaskRepository.deleteById(subTaskId);
     }
