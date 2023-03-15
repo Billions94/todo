@@ -5,6 +5,7 @@ import com.api.todo.SubTask.Repository.SubTaskRepository;
 import com.api.todo.Task.Model.Task;
 import com.api.todo.Task.Repository.TaskRepository;
 import com.api.todo.Todo.Repository.TodoRepository;
+import com.api.todo.Util.Util;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
 
 @AllArgsConstructor
 @Service
-public class SubTaskService {
+public class SubTaskService extends Util {
     private final SubTaskRepository subTaskRepository;
     private final TaskRepository taskRepository;
     private final TodoRepository todoRepository;
@@ -78,7 +79,7 @@ public class SubTaskService {
         boolean exists = todoRepository.existsById(subTaskId);
 
         if (!exists)
-            throw new IllegalStateException("SubTask with id" + subTaskId + "does not exists");
+            throw new IllegalStateException(this.concatStrings("SubTask with id does not exists", subTaskId));
 
         subTaskRepository.deleteById(subTaskId);
     }
