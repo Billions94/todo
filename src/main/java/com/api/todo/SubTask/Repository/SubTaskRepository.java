@@ -5,6 +5,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface SubTaskRepository extends MongoRepository<SubTask, String> {
     SubTask getSubTaskById(String id);
-    void deleteAllSubTaskByTodoId(String todoId);
+    void deleteSubTaskByTodoId(String todoId);
     void deleteAllSubTaskByTaskId(String taskId);
 }

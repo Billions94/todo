@@ -54,7 +54,7 @@ public class TodoService {
         if (!exists)
             throw new IllegalStateException("Todo with id" + todoId + "does not exists");
 
-        subTaskRepository.deleteAllSubTaskByTodoId(todoId);
+        subTaskRepository.deleteSubTaskByTodoId(todoId);
         taskRepository.deleteTaskByTodoId(todoId);
         todoRepository.deleteById(todoId);
     }
